@@ -1,0 +1,1598 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>{block:IndexPage}{Title}{/block:IndexPage}{block:SearchPage}Search results for: {SearchQuery}{/block:SearchPage}{block:PostSummary}{PostSummary}{/block:PostSummary}</title>
+    {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+    <link rel="shortcut icon" href="{Favicon}" />
+    <link rel="apple-touch-icon" href="{PortraitURL-128}"/>
+    <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//static.tumblr.com/2zstwx4/FSkou7ljk/style.css" rel="stylesheet">
+    <!-- DEFAULT VARIABLES -->
+    <!-- <meta name="color:Post Type Text" content="#555555"/>
+    <meta name="color:Post Type Photo" content="#555555"/>
+    <meta name="color:Post Type Photoset" content="#555555"/>
+    <meta name="color:Post Type Quote" content="#555555"/>
+    <meta name="color:Post Type Link" content="#555555"/>
+    <meta name="color:Post Type Chat" content="#555555"/>
+    <meta name="color:Post Type Video" content="#555555"/>
+    <meta name="color:Post Type Audio" content="#555555"/> 
+    <meta name="image:Header" content=""/>-->
+    <meta name="if:Show About Widget" content="1"/>
+    <meta name="if:Show Search" content="1">
+    <meta name="if:Show Advertisement" content="1">
+    <meta name="if:Show Stuff I Like Widget" content="1"/>
+    <meta name="if:Show Latest Tweets Widget" content="0"/>
+    <meta name="if:Show People I Follow Widget" content="1"/>
+    <meta name="text:Number of Tweets" content="3"/>
+    <meta name="text:Google Analytics ID" content="" />
+    <meta name="text:Disqus Shortname" content="" />
+     <meta name="if:Show Navigation" content="1"/>
+        <meta name="if:Alternate Header Layout" content="0"/>
+        <meta name="if:Show Description" content="0"/>
+        <meta name="if:Show Archive Navigation Link" content="1"/>
+        <meta name="if:Wide Images" content="1"/>
+        <meta name="if:Photoset Layout" content="0"/>
+        <meta name="if:Show Post Tags" content="1"/>
+        <meta name="if:Show Post Notes" content="1"/>
+        <meta name="if:Show Copyright" content="0"/>
+         <meta name="Title font" content="Gibson">
+        <meta name="Title font weight" content="bold" title="Bold">
+        <meta name="Title font weight" content="normal" title="Normal">
+        <meta name="font:Body font" content="Calluna"/>
+         <meta name="if:Sort By Tag" content="1" />
+        <meta name="text:Sort By Tag" content="text, photo, photoset, panorama, quote, link, chat, audio, video, answer" />
+        
+
+        <meta name="color:Background color" content="#fff">
+             <meta name="text:Slider Heading Text" content="Inspiration Is Silver"/>
+                <meta name="text:Slider Box Desciption Text" content="Create your blog with the Silver Tumblr Theme"/>
+                  <meta name="text:Learn More Button Link" content="http://tumblr.com"/>
+                  <meta name="text:Learn More Button Text" content="Learn More"/>
+
+       <!--  <meta name="color:Body text" content="#333333"/>
+        <meta name="color:Secondary text" content="#888888"/> -->
+        <meta name="image:Logo" content=""/>
+        <meta name="image:About Me image" content=""/>
+        
+        <meta name="text:Advertisement link" content="">
+        <meta name="image:Advertisement image" content=""/>
+        
+      <meta name="image:(All slider images Width-900px & Height-330px)" content=""/>
+       <meta name="image:First slider image" content=""/>
+        <meta name="image:Second slider image" content=""/>
+        <meta name="image:Third slider image" content=""/>
+        <meta name="image:Fourth slider image" content=""/>
+        <meta name="image:Five slider image" content=""/>
+        
+        <meta name="text:TypeKit ID" content=""/>
+        <meta name="text:Title Font" content=""/>
+        <meta name="text:Body Font" content=""/>
+        <meta name="text:Post Headline Font" content=""/>
+        <!--<meta name="text:Secondary Font" content=""/>-->
+
+        <meta name='text:Disqus Shortname' content='' />
+        <!--Social Links-->
+        <meta name='text:Facebook Page Url' content='' />
+        <meta name='text:Intagram Page Url' content='' />
+        <meta name='text:Google Plus Page Url' content='' />
+        <meta name='text:Twitter Page Url' content='' />
+        
+        <!--- COLOR ----> 
+        <meta name='color:Menu color' content='#FFFFFF' />
+        <meta name='color:Menu color on hover' content='#000000' />
+        <meta name='color:Menu background color' content='#acacac' />
+        <meta name="if:Show slider" content="1"/>
+        <meta name="if:Show slider text" content="1"/>
+        <meta name="if:Post sharing icon" content="1"/>
+        
+       
+
+<style type="text/css">
+body{
+    background: {color:Background color};
+}
+.slider {
+    
+    padding: 5em 0px;
+    margin-top: -32em;
+    position: absolute;
+}
+
+/*.slider {
+    background: url({image:Slider});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5em 0px;
+    margin-top: 1em;
+}
+*/
+
+
+.post-tit a img{
+    padding: 5px;
+        background:#ccc;
+    border:1px solid #c3c3c3;
+    text-align: center;
+        width: 100%;
+}
+.post-tit img{
+    padding: 5px;
+        background:#ccc;
+    border:1px solid #c3c3c3;
+    text-align: center;
+        width: 100%;
+}
+.post-tit{
+    margin-bottom: 10px;
+    
+}
+.post-tit .caption{
+    font-size: 18px;
+}
+.chat-wrap{
+    list-style: none;
+    
+}
+.chat-wrap li span{
+    color: #000;
+    
+}
+
+.chat-wrap li{
+    background: #ccc;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.link a{
+    color: blue;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+.link a:hover{
+    color: #529ecc;
+    text-decoration: underline;
+}
+.quote{
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+.post-tit span{
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.video-wrap{
+    width:100%;
+}
+.video-wrap iframe{
+    width: 100%;
+    height: 350px;
+}
+
+.photoset-wrap iframe{
+    width: 100%;
+    height: 1040px;
+}
+
+.post-tit .caption p{
+    line-height: 25px;
+    color: #333;
+    font-size: 16px
+}
+.tags p a{
+    padding: 5px 10px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+}
+.tags p a:hover{
+    background: #ccc;
+    color: #fff;
+}
+/*.post-tit h4 a {
+    color: #af4991;
+}*/
+.navbar-default .navbar-nav>li>a {
+    color: {color:Menu color};
+    text-shadow: none;
+    text-transform: uppercase;
+    background: {color:Menu background color};
+    margin-right: 5px;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: {color:Menu color on hover};
+    background-color: transparent;
+}
+.btn-icon .pull-left a:before {
+    background: {color:Menu background color};
+    color: {color:Menu color};
+}
+
+/**********************************/
+
+
+/* new css */
+ul.dropdown{list-style:none; display:none; position: absolute;z-index: 1000;  background: {color:Menu background color};}
+.navbar-nav{position:relative; z-index:1000;}
+ul.dropdown li>a{padding:10px 20px; border-bottom:1px #CCC solid; color: {color:Menu color}; width:200px; display:block;text-transform: uppercase; }
+ul.dropdown li>a:hover{color:{color:Menu color on hover};}
+li.dropdwon-list:hover ul.dropdown{display:block; transition:0.5s 0.5s;}
+
+
+
+
+/* silder */
+
+
+#first-slider .main-container {
+  padding: 0;
+}
+
+
+#first-slider .slide1 h3, #first-slider .slide2 h3, #first-slider .slide3 h3, #first-slider .slide4 h3{
+    color: #fff;
+    font-size: 30px;
+      text-transform: uppercase;
+      font-weight:700;
+}
+
+#first-slider .slide1 h4,#first-slider .slide2 h4,#first-slider .slide3 h4,#first-slider .slide4 h4{
+    color: #fff;
+    font-size: 30px;
+      text-transform: uppercase;
+      font-weight:700;
+}
+#first-slider .slide1 .text-left ,#first-slider .slide3 .text-left{
+    padding-left: 40px;
+}
+
+
+#first-slider .carousel-indicators {
+  bottom: 0;
+}
+#first-slider .carousel-control.right,
+#first-slider .carousel-control.left {
+  background-image: none;
+}
+#first-slider .carousel .item {
+  min-height: 425px; 
+  height: 100%;
+  width:100%;
+}
+
+.carousel-inner .item .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+#first-slider h3{
+  animation-delay: 1s;
+}
+#first-slider h4 {
+  animation-delay: 2s;
+}
+#first-slider h2 {
+  animation-delay: 3s;
+}
+
+
+#first-slider .carousel-control {
+    width: 6%;
+        text-shadow: none;
+}
+
+
+#first-slider h1 {
+  text-align: center;  
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#first-slider .p {
+  padding-top: 125px;
+  text-align: center;
+}
+
+#first-slider .p a {
+  text-decoration: underline;
+}
+#first-slider .carousel-indicators li {
+    width: 14px;
+    height: 14px;
+    background-color: rgba(255,255,255,.4);
+  border:none;
+}
+#first-slider .carousel-indicators .active{
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+  border:none;
+}
+
+
+.carousel-fade .carousel-inner .item {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+.carousel-control .fa-angle-right, .carousel-control .fa-angle-left {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+}
+.carousel-control .fa-angle-left{
+    left: 50%;
+    width: 38px;
+    height: 38px;
+    margin-top: -15px;
+    font-size: 30px;
+    color: #fff;
+    border: 3px solid #ffffff;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 53px;
+}
+.carousel-control .fa-angle-right{
+    right: 50%;
+    width: 38px;
+    height: 38px;
+    margin-top: -15px;
+    font-size: 30px;
+    color: #fff;
+    border: 3px solid #ffffff;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 53px;
+}
+.carousel-control {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+#first-slider .slide1 {
+    background-image:url({image:First slider image});
+      background-size: cover;
+    background-repeat: no-repeat;
+}
+#first-slider .slide2 {
+  background-image:url({image:Second slider image});
+      background-size: cover;
+    background-repeat: no-repeat;
+}
+#first-slider .slide3 {
+  background-image:url({image:Third slider image});
+      background-size: cover;
+    background-repeat: no-repeat;
+}
+#first-slider .slide4 {
+  background-image:url({image:Fourth slider image});
+      background-size: cover;
+    background-repeat: no-repeat;
+}
+#first-slider .slide5 {
+  background-image:url({image:Five slider image});
+      background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*************************************************/
+.categories ul li:hover a {
+    background: #6b004c;
+    color: #fff;
+}
+
+.categories ul li:hover{
+    background: #6b004c;
+    color: #fff;
+}
+
+.categories ul li{    padding: 10px 10px; }
+
+li.dropdwon-list.page span.glyphicon.glyphicon-menu-down{
+    font-size:12px;
+}
+
+#older:after {    content: " →"; }
+#newer:before {   content: "← "; }
+.pagination {    width: 100%; }
+span.next-page a#older {
+    float: right;
+    color: #666666;
+    font-family: 'Helvetica Neue', "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+span.previous-page a#newer {
+    float: left;
+    color: #666666;
+    font-family: 'Helvetica Neue', "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+p {   margin: 10px 8px; }
+h4 { font-size: 18px; }
+.post-tit h4{
+    color: #af4991;
+    display: inline-block;
+    margin-right: 10px;
+}
+.post-tit h4 a {
+    color: #af4991;
+}
+.post-tit span {
+    display: inherit;
+}
+.post-tit h2 span {
+    font-size: 36px;
+     margin: 10px 4px;
+}
+h2 {
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px 4px;
+}
+    
+</style>
+</head>
+
+
+<body>
+<div id="wraper">
+<!-- header -->
+<div class="logo my-container">
+         {block:IfLogoImage}
+                    <a href="/"><img src="{image:Logo}" alt="{Title}"/></a>
+                    {/block:IfLogoImage}
+
+                    {block:IfNotLogoImage}
+                    <h1><a href="/">{Title}</a></h1>
+                    {/block:IfNotLogoImage}
+
+                    {block:IfShowDescription}
+                    <p class="blog-description">{Description}</p>
+                    {/block:IfShowDescription}
+</div>
+<nav class="navbar navbar-default  my-container">
+    <div class="">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        
+        <div id="navbar" class="navbar-collapse collapse">
+        <div class="nav-right-bar">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+                            {block:HasPages}{block:Pages}
+                            <li><a href="{URL}">{Label}</a></li>
+                            {/block:Pages}   {/block:HasPages}
+                            
+                                    {block:IfSortByTag}
+                                 <!--   <li id="js-tags" class="sort-by dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tags <i class="fa fa-caret-down"></i></a>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                        <li><a href="/tagged/Fashion">Fashion</a></li>
+                                        <li><a href="/tagged/Music">Music</a></li>
+                                        <li><a href="/tagged/Girlish">Girlish</a></li>
+                                        </ul>
+                                    </li>-->
+                                {/block:IfSortByTag}
+                            {block:AskEnabled}
+                            <li class="ask">
+                            <a href="/ask" class="page">{AskLabel}</a>
+                                
+                            </li>
+                            {/block:AskEnabled}
+                            
+                            {block:SubmissionsEnabled}
+                            <li class="submit">
+                            <a href="/submit" class="page">{SubmitLabel}</a>
+                            </li>
+                            {/block:SubmissionsEnabled}
+                            
+                            <li  class="dropdwon-list page"><a>Page &nbsp;<span class="glyphicon glyphicon-menu-down"></span></a>
+                            <ul class="dropdown"><li><a href='/custom-page'>Custom Page</a></a></li></ul></li>
+                            
+                            <li class="dropdwon-list page"><a>Tag &nbsp;<span class="glyphicon glyphicon-menu-down"></span></a>
+                            
+                            <ul class="dropdown">
+                               {block:Posts}    
+                                     {block:HasTags}
+                                       {block:Tags}
+                                        <li> <a href="{TagURL}">{Tag}</a></li>
+                                       {/block:Tags}
+                                    {/block:HasTags}
+                                
+                                {/block:Posts}
+                            </ul>
+                            </li>
+                            <li class="archive"><a href="/archive">Archive</a></li>
+                            <li class="mobile"><a href="/mobile">Mobile</a></li>
+                            <li class="rss"><a href="{RSS}">RSS</a></li>
+              </ul>
+          
+          <ul class="pull-right nav-social">
+            <li><a href="{text:Facebook Page Url}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="{text:Twitter Page Url}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="{text:Google Plus Page Url}" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+            <li><a href="{text:Intagram Page Url}" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          </ul>
+          
+           </div>
+        </div><!--/.nav-collapse -->
+        </div>
+
+    </nav>
+
+<!-- header -->
+
+<!-- slider -->
+{block:IfShowslider}
+<div class="my-container">
+<div id="first-slider" style="margin-top:1em;">
+    <div id="carousel-example-generic" class="carousel slide carousel-fade">
+        <div class="carousel-inner" role="listbox">
+            <!-- Item 1 -->
+            <div class="item active slide1">
+                <div class="row"><div class="container">
+                
+                </div>
+                </div>
+             </div> 
+            <!-- Item 2 -->
+            <div class="item slide2">
+                <div class="row"><div class="container">
+                </div>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="item slide3">
+                <div class="row"><div class="container">
+                </div>
+                </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="item slide4">
+                <div class="row"><div class="container">
+                  </div>
+                </div>
+            </div>
+            <!-- Item 5 -->
+            <div class="item slide5">
+                <div class="row"><div class="container">
+                  </div>
+                </div>
+            </div>
+            <!-- End Item 5 -->
+
+        </div>
+        <div class="slider">
+    
+     {block:IfShowslidertext}
+        <div class="s-box">
+            <div class="s-box-inner">
+                <h2>{text:Slider Heading Text}</h2>
+                <p>{text:Slider Box Desciption Text}</p>
+                <a href="{text:Learn More Button Link}">{text:Learn More Button Text}</a>
+            </div>
+        </div>
+     {/block:IfShowslidertext}     
+     
+    </div>
+    </div>
+</div>
+
+
+
+    
+    
+</div> 
+    
+{/block:IfShowslider}
+    
+<!-- slider -->
+
+
+<!-- contain-area -->
+<div class="my-container contain-area">
+    <div class="col-md-8 col-sm-7 col-xs-12 left-part">
+    {Block:Posts}
+
+    {Block:Text}
+    <article>
+            <div class="post-tit">
+                     {block:HasTags}
+                     {block:Tags} <h4><a href="{TagURL}">#{Tag}</a></h4> {/block:Tags}
+                        {/block:HasTags}
+                <div class="seprator">
+                    <div class="col-md-3 col-sm-3 col-xs-3"></div>
+                    <div class="col-md-9 col-sm-9 col-xs-9"></div>
+                    <div class="clear"></div>
+                </div>
+                 <span>{Month} {DayOfMonthWithZero}, {Year}</span>
+                 <h2 ><a href="{Permalink}">{Title}</a></h2>
+
+                  {block:IfDisqusShortname}
+                            <div class="comments">
+                                <a href="{Permalink}#disqus_thread">0 comments</a>
+                            </div>
+                        {/block:IfDisqusShortname}
+                        {block:NoteCount}
+                            <div class="note-count">
+                                <a href="{Permalink}#notes">{NoteCountWithLabel}</a>
+                            </div><!-- .note-count -->
+                        {/block:NoteCount}
+            </div>
+            <p>{Body}</p>
+            
+            {block:HomePage} 
+            <div class="btn-icon" style="margin-bottom:10px;">
+                <div class="pull-left">
+                    <a href="{Permalink}">READ MORE</a>
+                </div>
+                
+                {block:IfPostsharingicon}
+                <div class="pull-right">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={Permalink}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="http://twitter.com/share?text={Title}&url={Permalink}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://plus.google.com/share?url={Permalink}"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="http://pinterest.com/pin/create/button/?url={Permalink}&description={Title}"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                </div>
+                {/block:IfPostsharingicon}
+                
+                <div class="clear"></div>
+            </div>
+            {/block:HomePage}
+            
+            {block:PermalinkPagination} 
+            <div class="next-pre-detail">
+            {block:PreviousPost}
+            <a href="{PreviousPost}" class="pull-left">PREVIOUS</a>
+              {/block:PreviousPost}
+              {block:NextPost}
+            <a href="{NextPost}" class="pull-right">NEXT</a>
+             {/block:NextPost} 
+            <div class="clear"></div>           
+        </div>
+        {/block:PermalinkPagination}
+        
+   
+
+
+        
+        </article>
+    {/Block:Text}
+
+    {Block:Photo}
+    <article>
+            <div class="post-tit">
+            {block:HasTags}
+                     {block:Tags} <h4><a href="{TagURL}">#{Tag}</a></h4> {/block:Tags}
+                        {/block:HasTags}
+                <div class="seprator">
+                    <div class="col-md-3 col-sm-3 col-xs-3"></div>
+                    <div class="col-md-9 col-sm-9 col-xs-9"></div>
+                    <div class="clear"></div>
+                </div>
+            <div class="date">
+             <span>{Month} {DayOfMonthWithZero}, {Year}</span>
+            <h2><a href="{LinkURL}">{PhotoAlt}</a></h2>
+             
+              {block:IfDisqusShortname}
+                            <div class="comments">
+                                <a href="{Permalink}#disqus_thread">0 comments</a>
+                            </div>
+                        {/block:IfDisqusShortname}
+                        {block:NoteCount}
+                            <div class="note-count">
+                                <a href="{Permalink}#notes">{NoteCountWithLabel}</a>
+                            </div><!-- .note-count -->
+                        {/block:NoteCount}
+             </div>
+                {LinkOpenTag}<img src="{PhotoURL-500}" class="photo" alt="{PhotoAlt}" />{LinkCloseTag}
+                            {block:HighRes}<a href="{PhotoURL-HighRes}" class="high-res" target="_blank"></a>{/block:HighRes}
+                            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                             {block:HomePage} 
+            <div class="btn-icon" style="margin-bottom:10px;">
+                <div class="pull-left">
+                    <a href="{Permalink}">READ MORE</a>
+                </div>
+                
+                {block:IfPostsharingicon}
+                <div class="pull-right">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={Permalink}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="http://twitter.com/share?text={Title}&url={Permalink}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://plus.google.com/share?url={Permalink}"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="http://pinterest.com/pin/create/button/?url={Permalink}&description={Title}"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                </div>
+                {/block:IfPostsharingicon}
+                
+                <div class="clear"></div>
+            </div>
+            {/block:HomePage}
+                {block:PermalinkPagination} 
+            <div class="next-pre-detail" style="margin-top:20px">
+            {block:PreviousPost}
+            <a href="{PreviousPost}" class="pull-left">PREVIOUS</a>
+              {/block:PreviousPost}
+              {block:NextPost}
+            <a href="{NextPost}" class="pull-right">NEXT</a>
+             {/block:NextPost} 
+            <div class="clear"></div>           
+        </div>
+        {/block:PermalinkPagination}
+                            
+                           <!-- {block:HasTags}
+                            <div class="tags">
+                                <p>Tags: {block:Tags}<a href="{TagURL}" class="single-tag">{Tag}</a> {/block:Tags}</p>
+                            </div>
+                        {/block:HasTags}-->
+                        </div>
+
+        </article>
+    {/Block:Photo}
+
+    {Block:Quote}
+    <article>
+            <div class="post-tit quote">
+            {block:HasTags}
+                     {block:Tags} <h4><a href="{TagURL}">#{Tag}</a></h4> {/block:Tags}
+                        {/block:HasTags}
+                <div class="seprator">
+                    <div class="col-md-3 col-sm-3 col-xs-3"></div>
+                    <div class="col-md-9 col-sm-9 col-xs-9"></div>
+                    <div class="clear"></div>
+                </div>
+             <span>{Month} {DayOfMonthWithZero}, {Year}</span>
+              {block:IfDisqusShortname}
+                            <div class="comments">
+                                <a href="{Permalink}#disqus_thread">0 comments</a>
+                            </div>
+                        {/block:IfDisqusShortname}
+                        {block:NoteCount}
+                            <div class="note-count">
+                                <a href="{Permalink}#notes">{NoteCountWithLabel}</a>
+                            </div><!-- .note-count -->
+                        {/block:NoteCount}
+                <div class="quote-content">"{Quote}"</div>
+                            {block:Source}<p class="quote-source">&mdash; {Source}</p>{/block:Source}
+                            </div>
+                             {block:HomePage} 
+            <div class="btn-icon" style="margin-bottom:10px;">
+                <div class="pull-left">
+                    <a href="{Permalink}">READ MORE</a>
+                </div>
+                
+                {block:IfPostsharingicon}
+                <div class="pull-right">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={Permalink}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="http://twitter.com/share?text={Title}&url={Permalink}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://plus.google.com/share?url={Permalink}"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="http://pinterest.com/pin/create/button/?url={Permalink}&description={Title}"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                </div>
+                {/block:IfPostsharingicon}
+                
+                <div class="clear"></div>
+            </div>
+            {/block:HomePage}
+                {block:PermalinkPagination} 
+            <div class="next-pre-detail">
+            {block:PreviousPost}
+            <a href="{PreviousPost}" class="pull-left">PREVIOUS</a>
+              {/block:PreviousPost}
+              {block:NextPost}
+            <a href="{NextPost}" class="pull-right">NEXT</a>
+             {/block:NextPost} 
+            <div class="clear"></div>           
+        </div>
+        {/block:PermalinkPagination}
+                            <!--{block:HasTags}
+                            <div class="tags">
+                                <p>Tags: {block:Tags}<a href="{TagURL}" class="single-tag">{Tag}</a> {/block:Tags}</p>
+                            </div>
+                        {/block:HasTags}-->
+        </article>
+    {/Block:Quote}
+
+    {Block:Link}
+    <article>
+            <div class="post-tit link">
+            {block:HasTags}
+                     {block:Tags} <h4><a href="{TagURL}">#{Tag}</a></h4> {/block:Tags}
+                        {/block:HasTags}
+                <div class="seprator">
+                    <div class="col-md-3 col-sm-3 col-xs-3"></div>
+                    <div class="col-md-9 col-sm-9 col-xs-9"></div>
+                    <div class="clear"></div>
+                </div>
+             <span>{Month} {DayOfMonthWithZero}, {Year}</span>
+              {block:IfDisqusShortname}
+                            <div class="comments">
+                                <a href="{Permalink}#disqus_thread">0 comments</a>
+                            </div>
+                        {/block:IfDisqusShortname}
+                        {block:NoteCount}
+                            <div class="note-count">
+                                <a href="{Permalink}#notes">{NoteCountWithLabel}</a>
+                            </div><!-- .note-count -->
+                        {/block:NoteCount}
+                 <div class="link-wrap"><a href="{URL}" {Target}>{Name}</a></div>
+                            {block:Description}<div class="description">{Description}</div>{/block:Description}
+            </div>
+             {block:HomePage} 
+            <div class="btn-icon" style="margin-bottom:10px;">
+                <div class="pull-left">
+                    <a href="{Permalink}">READ MORE</a>
+                </div>
+                
+                {block:IfPostsharingicon}
+                <div class="pull-right">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={Permalink}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="http://twitter.com/share?text={Title}&url={Permalink}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://plus.google.com/share?url={Permalink}"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="http://pinterest.com/pin/create/button/?url={Permalink}&description={Title}"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                </div>
+                {/block:IfPostsharingicon}
+                
+
+                <div class="clear"></div>
+            </div>
+            {/block:HomePage}
+                {block:PermalinkPagination} 
+            <div class="next-pre-detail">
+            {block:PreviousPost}
+            <a href="{PreviousPost}" class="pull-left">PREVIOUS</a>
+              {/block:PreviousPost}
+              {block:NextPost}
+            <a href="{NextPost}" class="pull-right">NEXT</a>
+             {/block:NextPost} 
+            <div class="clear"></div>           
+        </div>
+        {/block:PermalinkPagination}
+        <!--    {block:HasTags}
+                            <div class="tags">
+                                <p>Tags: {block:Tags}<a href="{TagURL}" class="single-tag">{Tag}</a> {/block:Tags}</p>
+                            </div>
+                        {/block:HasTags}-->
+        </article>
+    {/Block:Link}
+
+    {Block:Chat}
+    <article>
+            <div class="post-tit">
+            {block:HasTags}
+                     {block:Tags} <h4><a href="{TagURL}">#{Tag}</a></h4> {/block:Tags}
+                        {/block:HasTags}
+                <div class="seprator">
+                    <div class="col-md-3 col-sm-3 col-xs-3"></div>
+                    <div class="col-md-9 col-sm-9 col-xs-9"></div>
+                    <div class="clear"></div>
+                </div>
+             <span>{Month} {DayOfMonthWithZero}, {Year}</span>
+              {block:IfDisqusShortname}
+                            <div class="comments">
+                                <a href="{Permalink}#disqus_thread">0 comments</a>
+                            </div>
+                        {/block:IfDisqusShortname}
+                        {block:NoteCount}
+                            <div class="note-count">
+                                <a href="{Permalink}#notes">{NoteCountWithLabel}</a>
+                            </div><!-- .note-count -->
+                        {/block:NoteCount}
+                {block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+                            <ul class="chat-wrap">
+                            {block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                    {block:Label}<span class="label">{Label}</span>{/block:Label}
+                                    {Line}
+                                </li>
+                            {/block:Lines}
+                            </ul>
+            </div>
+             {block:HomePage} 
+            <div class="btn-icon" style="margin-bottom:10px;">
+                <div class="pull-left">
+                    <a href="{Permalink}">READ MORE</a>
+                </div>
+                
+                {block:IfPostsharingicon}
+                <div class="pull-right">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={Permalink}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="http://twitter.com/share?text={Title}&url={Permalink}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://plus.google.com/share?url={Permalink}"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="http://pinterest.com/pin/create/button/?url={Permalink}&description={Title}"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                </div>
+                {/block:IfPostsharingicon}
+                
+                <div class="clear"></div>
+            </div>
+            {/block:HomePage}
+                {block:PermalinkPagination} 
+            <div class="next-pre-detail">
+            {block:PreviousPost}
+            <a href="{PreviousPost}" class="pull-left">PREVIOUS</a>
+              {/block:PreviousPost}
+              {block:NextPost}
+            <a href="{NextPost}" class="pull-right">NEXT</a>
+             {/block:NextPost} 
+            <div class="clear"></div>           
+        </div>
+        {/block:PermalinkPagination}
+            <!--{block:HasTags}
+                            <div class="tags">
+                                <p>Tags: {block:Tags}<a href="{TagURL}" class="single-tag">{Tag}</a> {/block:Tags}</p>
+                            </div>
+                        {/block:HasTags}-->
+        </article>
+    {/Block:Chat}
+
+    {Block:Audio}
+    <article>
+            <div class="post-tit">
+            {block:HasTags}
+                     {block:Tags} <h4><a href="{TagURL}">#{Tag}</a></h4> {/block:Tags}
+                        {/block:HasTags}
+                <div class="seprator">
+                    <div class="col-md-3 col-sm-3 col-xs-3"></div>
+                    <div class="col-md-9 col-sm-9 col-xs-9"></div>
+                    <div class="clear"></div>
+                </div>
+             <span>{Month} {DayOfMonthWithZero}, {Year}</span>
+              {block:IfDisqusShortname}
+                            <div class="comments">
+                                <a href="{Permalink}#disqus_thread">0 comments</a>
+                            </div>
+                        {/block:IfDisqusShortname}
+                        {block:NoteCount}
+                            <div class="note-count">
+                                <a href="{Permalink}#notes">{NoteCountWithLabel}</a>
+                            </div><!-- .note-count -->
+                        {/block:NoteCount}
+                <div class="audio-wrap">{AudioPlayerGrey}</div>
+                            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+            </div>
+             {block:HomePage} 
+            <div class="btn-icon" style="margin-bottom:10px;">
+                <div class="pull-left">
+                    <a href="{Permalink}">READ MORE</a>
+                </div>
+                
+                {block:IfPostsharingicon}
+                <div class="pull-right">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={Permalink}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="http://twitter.com/share?text={Title}&url={Permalink}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://plus.google.com/share?url={Permalink}"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="http://pinterest.com/pin/create/button/?url={Permalink}&description={Title}"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                </div>
+                {/block:IfPostsharingicon}
+                
+                
+                <div class="clear"></div>
+            </div>
+            {/block:HomePage}
+                {block:PermalinkPagination} 
+            <div class="next-pre-detail">
+            {block:PreviousPost}
+            <a href="{PreviousPost}" class="pull-left">PREVIOUS</a>
+              {/block:PreviousPost}
+              {block:NextPost}
+            <a href="{NextPost}" class="pull-right">NEXT</a>
+             {/block:NextPost} 
+            <div class="clear"></div>           
+        </div>
+        {/block:PermalinkPagination}
+            <!--{block:HasTags}
+                            <div class="tags">
+                                <p>Tags: {block:Tags}<a href="{TagURL}" class="single-tag">{Tag}</a> {/block:Tags}</p>
+                            </div>
+                        {/block:HasTags}-->
+        </article>
+    {/Block:Audio}
+
+{block:Photoset}
+    <article>
+            <div class="post-tit">
+            
+            {block:HasTags}
+                 {block:Tags} <h4><a href="{TagURL}">#{Tag}</a></h4> {/block:Tags}
+            {/block:HasTags}
+            <div class="seprator">
+                <div class="col-md-3 col-sm-3 col-xs-3"></div>
+                <div class="col-md-9 col-sm-9 col-xs-9"></div>
+                <div class="clear"></div>
+            </div>
+            
+            
+            <span>{Month} {DayOfMonthWithZero}, {Year}</span>
+            
+            {block:IfDisqusShortname}
+                            <div class="comments">
+                                <a href="{Permalink}#disqus_thread">0 comments</a>
+                            </div>
+                        {/block:IfDisqusShortname}
+                        {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                        {block:NoteCount}
+                            <div class="note-count">
+                                <a href="{Permalink}#notes">{NoteCountWithLabel}</a>
+                            </div><!-- .note-count -->
+                        {/block:NoteCount}
+                        
+                <div class="photoset-wrap"><center>{Photoset-700}</center></div>
+                            
+                            </div>
+                            
+                           
+        
+
+                            
+                             {block:HomePage} 
+            <div class="btn-icon" style="margin-bottom:10px;">
+                <div class="pull-left">
+                    <a href="{Permalink}">READ MORE</a>
+                </div>
+                
+                {block:IfPostsharingicon}
+                <div class="pull-right">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={Permalink}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="http://twitter.com/share?text={Title}&url={Permalink}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://plus.google.com/share?url={Permalink}"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="http://pinterest.com/pin/create/button/?url={Permalink}&description={Title}"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                </div>
+                {/block:IfPostsharingicon}
+                
+                
+                <div class="clear"></div>
+            </div>
+            {/block:HomePage}
+                {block:PermalinkPagination} 
+            <div class="next-pre-detail">
+            {block:PreviousPost}
+            <a href="{PreviousPost}" class="pull-left">PREVIOUS</a>
+              {/block:PreviousPost}
+              {block:NextPost}
+            <a href="{NextPost}" class="pull-right">NEXT</a>
+             {/block:NextPost} 
+            <div class="clear"></div>           
+        </div>
+        {/block:PermalinkPagination}
+                           <!-- {block:HasTags}
+                            <div class="tags">
+                                <p>Tags: {block:Tags}<a href="{TagURL}" class="single-tag">{Tag}</a> {/block:Tags}</p>
+                            </div>
+                        {/block:HasTags}-->
+        </article>
+
+{/block:Photoset}
+
+
+
+
+
+
+
+
+    {Block:Video}
+    <article>
+            <div class="post-tit">
+            
+            {block:HasTags}
+                 {block:Tags} <h4><a href="{TagURL}">#{Tag}</a></h4> {/block:Tags}
+            {/block:HasTags}
+            <div class="seprator">
+                <div class="col-md-3 col-sm-3 col-xs-3"></div>
+                <div class="col-md-9 col-sm-9 col-xs-9"></div>
+                <div class="clear"></div>
+            </div>
+            
+            
+            <span>{Month} {DayOfMonthWithZero}, {Year}</span>
+            
+            {block:IfDisqusShortname}
+                            <div class="comments">
+                                <a href="{Permalink}#disqus_thread">0 comments</a>
+                            </div>
+                        {/block:IfDisqusShortname}
+                        {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                        
+                        {block:NoteCount}
+                            <div class="note-count">
+                                <a href="{Permalink}#notes">{NoteCountWithLabel}</a>
+                            </div><!-- .note-count -->
+                        {/block:NoteCount}
+                <div class="video-wrap"><center>{Video-700}</center></div>
+                            
+                            </div>
+                            
+                           
+        
+
+                            
+                             {block:HomePage} 
+            <div class="btn-icon" style="margin-bottom:10px;">
+                <div class="pull-left">
+                    <a href="{Permalink}">READ MORE</a>
+                </div>
+                
+                {block:IfPostsharingicon}
+                <div class="pull-right">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={Permalink}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="http://twitter.com/share?text={Title}&url={Permalink}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://plus.google.com/share?url={Permalink}"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="http://pinterest.com/pin/create/button/?url={Permalink}&description={Title}"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                </div>
+                {/block:IfPostsharingicon}
+                
+                
+                <div class="clear"></div>
+            </div>
+            {/block:HomePage}
+                {block:PermalinkPagination} 
+            <div class="next-pre-detail">
+            {block:PreviousPost}
+            <a href="{PreviousPost}" class="pull-left">PREVIOUS</a>
+              {/block:PreviousPost}
+              {block:NextPost}
+            <a href="{NextPost}" class="pull-right">NEXT</a>
+             {/block:NextPost} 
+            <div class="clear"></div>           
+        </div>
+        {/block:PermalinkPagination}
+                           <!-- {block:HasTags}
+                            <div class="tags">
+                                <p>Tags: {block:Tags}<a href="{TagURL}" class="single-tag">{Tag}</a> {/block:Tags}</p>
+                            </div>
+                        {/block:HasTags}-->
+        </article>
+    {/Block:Video}
+
+        
+        {/Block:Posts}
+
+        <div class="next-pre-table">
+          {block:Pagination}
+                    <div class="pagination">
+                        {block:PreviousPage}
+                        <span class="previous-page">
+                        
+                        <a title="Newer" href="{PreviousPage}" id="newer">Newer</a>
+                        </span>
+                        {/block:PreviousPage}
+                        
+                        {block:NextPage}
+                        <span class="next-page">
+                        
+                         <a title="Older" href="{NextPage}" id="older">Older</a>
+                        </span>
+                        {/block:NextPage}
+                        
+                    </div><!-- .pagination -->
+                    
+             {/block:Pagination}       
+                    
+                
+        </div>
+
+    </div>
+    <div class="col-md-4 col-sm-5 col-xs-12 right-part">
+        {block:IfShowAboutWidget}
+        <article class="left-about">
+               <div class="right-tit">
+                <h4>ABOUT ME</h4>
+            </div>
+               <figure>
+               
+                    <img src="{image:About Me image}" alt="portrait" />
+                    
+                    </figure>
+                    {block:Description}<p class="text-center">{Description}</p>{/block:Description}
+                
+            <figcaption class="text-center">
+                <a href="{text:Facebook Page Url}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="{text:Twitter Page Url}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="{text:Google Plus Page Url}"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                <a href="{text:Intagram Page Url}"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </figcaption>
+            
+        </article>
+        {/block:IfShowAboutWidget}
+        
+        {block:IfShowAdvertisement}
+        <article class="add" >
+            <div class="right-tit">
+                <h4>Advertisement</h4>
+            </div>
+            <a href="{text:Advertisement link}"><img src="{image:Advertisement image}" width="100%"></a>
+        </article>
+        
+        {/block:IfShowAdvertisement}
+{block:IfShowSearch}
+        <article class="search" >
+            <div class="right-tit">
+                <h4>search</h4>
+            </div>
+            <figure>
+            
+    <form action="/search" method="get">
+        <input type="text" name="q" value="{SearchQuery}" /> 
+        <button type="submit" ><i class="fa fa-search" aria-hidden="true"></i></button>
+    </form>
+    
+            </figure>
+        </article>
+        {/block:IfShowSearch}
+
+        <article class="search" >
+            <div class="right-tit">
+                <h4>Facebook</h4>
+            </div>
+            <figure>
+              
+              <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+              
+              
+            </figure>
+        </article>
+
+
+        <article class="categories" >
+            <div class="right-tit">
+                <h4>CATEGORIES</h4>
+            </div>
+            <ul>
+                <!-- <li><a href="#">Fashion</a><span class="pull-right">( 10 )</span></li>
+                <li><a href="#">Kids</a><span class="pull-right">( 01 )</span></li>
+                <li><a href="#">Girls Fashion</a><span class="pull-right">( 30 )</span></li>
+                <li><a href="#">Looks</a><span class="pull-right">( 123 )</span></li>
+                <li><a href="#">Hair style</a><span class="pull-right">( 26 )</span></li> -->
+
+                    <ul class="tags">
+                         {block:Posts}
+                         {block:Tags}
+                         <li class="{Tag}" ><a class="cat" href="{TagURL}">{Tag}</a><span class="pull-right"></span></li>
+                                 {/block:Tags}
+                                 {/block:Posts}
+                    </ul>
+                
+            </ul>
+            <script>
+             var tag=[];
+var txt="";
+$(".cat").each(function(){
+var ctxt = $(this).html();
+var postcount= $(".tags ."+ctxt).length;
+$(this).closest("li").find("span").html("( " + postcount +" )");
+});
+
+$(".cat").each(function(){
+var ctxt = $(this).html();
+var postcount1= $(".tags ."+ctxt).length;
+
+if(postcount1>1){
+$(this).closest("li").remove();
+}
+});
+                
+            </script>
+        </article>
+</div>
+<div class="clearfix"></div>
+</div>
+<footer>
+ 
+    <div class="my-container" style="text-align: center;">
+          <div id="footer">
+            <div id="colophon"><p>
+             Powered by <a href="http://tumblr.com">Tumblr</a>. Theme design and development by the <a href="https://www.ithinkreviews.com" target="_blank">iThinkReviews</a> Team
+            </p></div>
+        </div><!-- #footer -->
+    </div>
+</footer>
+
+</div>
+
+{block:Twitter}<script type="text/javascript" src="/tweets.js"></script>{/block:Twitter}
+{block:IfGoogleAnalyticsID}<script type="text/javascript">var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">try{var pageTracker=_gat._getTracker("{text:Google Analytics ID}");pageTracker._trackPageview()}catch(err){}</script>{block:IfGoogleAnalyticsID}
+{block:IfDisqusShortname}
+    <script type="text/javascript">
+        //<![CDATA[
+        (function() {
+            var links = document.getElementsByTagName('a');
+            var query = '?';
+            for(var i = 0; i < links.length; i++) {
+                if(links[i].href.indexOf('#disqus_thread') >= 0) {
+                    query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+                }
+            }
+            document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+        })();
+        //]]>
+        
+             $blogURL = '{BlogURL}';
+                    $sortByTag = false;
+                    {block:IfSortByTag}
+                        $sortByTag = true;
+                    {/block:IfSortByTag}
+                /* General */
+                    /* Photoset Grid */
+                    function photosetGridInit() {
+                        $('.photoset-layout').each(function() {
+                            var $id = this.id;
+                            $(this).photosetGrid({
+                                highresLinks: true,
+                                lowresWidth: 1000,
+                                gutter: '5px',
+                                rel: $id,
+                                onInit: function(){
+                                    $('.photoset-layout').removeClass('invisible');
+                                },
+                                onComplete: function(){
+                                    $('.photoset-layout a').colorbox({
+                                        transition: 'fade',
+                                        speed: 200,
+                                        fadeOut: 350,
+                                        photo: true,
+                                        returnFocus: true,
+                                        scalePhotos: true,
+                                        maxHeight:'90%',
+                                        maxWidth:'90%',
+                                        opacity: '0.999',
+                                        arrowKey: true,
+                                        closeButton: false,
+                                        previous: '<i class="fa fa-chevron-left"></i>',
+                                        next: '<i class="fa fa-chevron-right"></i>',
+                                        loop: false,
+                                        current: '',
+                                        onOpen: function(){
+                                            $('body').css({overflow:'hidden'});
+                                        },
+                                        onClosed: function(){
+                                            $('body').css({overflow:'auto'});
+                                        },
+                                        onComplete:function(){
+                                            $('.cboxPhoto, #cboxTopLeft, #cboxTopCenter, #cboxTopRight, #cboxMiddleLeft, #cboxMiddleRight, #cboxBottomLeft, #cboxBottomCenter, #cboxBottomRight').unbind().click($.colorbox.close);
+                                        }
+                                    });
+                                },
+                            });
+                        });
+                    }
+                    /* Colorbox */
+                        function colorboxInit(){
+                            $(".colorbox").colorbox({    
+                                initialWidth: 40,
+                                initialHeight: 40,
+                                transition: 'fade',
+                                maxWidth: '90%',
+                                maxHeight: '90%',
+                                speed: 200,
+                                fadeOut: 350,
+                                arrowKey: false,
+                                xhrError: '<div class="alert alert-danger" role="alert"><strong>You cannot preview posts from your Customization page. You must save and check it directly from your blog.</strong></div>',
+                                onOpen: function(){
+                                    $('body').css({overflow:'hidden'});
+                                },
+                                onClosed: function(){
+                                    $('body').css({overflow:'auto'});
+                                },
+                                onComplete: function(){
+                                    $('.cboxPhoto, #cboxTopLeft, #cboxTopCenter, #cboxTopRight, #cboxMiddleLeft, #cboxMiddleRight, #cboxBottomLeft, #cboxBottomCenter, #cboxBottomRight').unbind().click($.colorbox.close);
+                                }
+                            }); 
+                        }
+                    /* Sort by Tag */
+                        {block:IfSortByTag}
+                            if($sortByTag) {
+                                function sortByTagInit() {
+                                    var rawTags = '{text:Sort By Tag}';
+                                    var trimTags = rawTags.replace(/\s+/g, '');
+                                    var arrTags = trimTags.split(',');
+                                    $(arrTags).each(function(index, item){
+                                        $('#js-tags ul').append('<li><a href="' + $blogURL + 'tagged/' + item + '">' + item + '</a></li>');
+                                    });
+                                }
+                            }
+                        {/block:IfSortByTag}
+                    /* Back to Top */
+                        function backToTopInit() {
+                            $("#back-to-top").hide();
+                            $(function () {
+                                $(window).scroll(function () {
+                                    var height = $(window).height();
+                                    if ($(this).scrollTop() > height) {
+                                        $('#back-to-top').slideDown();
+                                    } else {
+                                        $('#back-to-top').slideUp();
+                                    }
+                                });
+                                $('#back-to-top').click(function () {
+                                    $('body,html').animate({scrollTop: 0}, 800);
+                                    return false;
+                                });
+                            });
+                        }
+                    /* Responsive iFrame - https://gist.github.com/aarongustafson/1313517 */
+                        function responsiveIframe(){
+                          $('iframe').each(function(){
+                            var
+                            $this = $(this),
+                            proportion = $this.data( 'proportion' ),
+                            w = $this.attr('width'),
+                            actual_w = $this.width();
+                            
+                            if(!proportion){
+                                proportion = $this.attr('height') / w;
+                                $this.data( 'proportion', proportion );
+                            }
+                          
+                            if(actual_w != w){
+                                $this.css( 'height', Math.round( actual_w * proportion ) + 'px' );
+                            }
+                          });
+                        }
+                    /* CubThemes Support Center */
+                        function cubThemesSupportInit(){
+                            if (document.domain == "assets.txmblr.com") {
+                                $("#cubthemes-toggle").show();
+                                $('#cubthemes-toggle').click(function(){
+                                    $('#cubthemes-support').addClass('active');
+                                    $('#cubthemes-overlay').addClass('active');
+                                    $('#ct-about iframe').attr('src', $('#ct-about iframe').attr('data-src'));
+                                    $('body').css('overflow', 'hidden');
+                                });
+                                $('.ct-close, #cubthemes-overlay').click(function(){
+                                    $('#cubthemes-support').removeClass('active');
+                                    $('#cubthemes-overlay').removeClass('active');
+                                    $('body').css('overflow', 'auto');
+                                });
+                                $('.ct-tabs li a').click(function(){
+                                    $('.ct-tabs .tab a').removeClass('active');
+                                    $(this).addClass('active');
+                                    $('.ct-tabs-content .ct-tab-pane').removeClass('active');
+                                    $('.ct-tabs-content ' + $(this).attr('data-toggle')).addClass('active');
+                                    var $dataSrc = $('.ct-tabs-content ' + $(this).attr('data-toggle') + ' iframe').attr('data-src');
+                                    $('.ct-tabs-content ' + $(this).attr('data-toggle') + ' iframe').attr('src', $dataSrc);
+                                });
+                            } else {
+                                $('#cubthemes-toggle').hide();
+                            }  
+                        }
+                    /* Viewbar */
+                        function viewbar(){
+                            var viewbar = document.createElement('script');
+                            viewbar.type = 'text/javascript';
+                            viewbar.async = true;
+                            viewbar.src = '//cubthemes.com/assets/jquery_viewbar.js';
+                            if(document.domain == 'basic.cubthemes.com') {
+                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(viewbar);
+                            }
+                        }
+                /* Execute Functions */
+                    $(document).ready(function(){
+                        photosetGridInit();
+                        colorboxInit();
+                        if($sortByTag) {
+                            sortByTagInit();
+                        }
+                        var externalLinks = $.trim( $('#external-links').html() ).length; 
+                        if(externalLinks == 0) {
+                            $('#external-links').hide();
+                        }
+                        backToTopInit();
+                        responsiveIframe();
+                        viewbar();
+                        cubThemesSupportInit();
+                    });
+                    $(window).resize(function(){
+                        responsiveIframe();
+                    });
+                    $(window).load(function(){
+                        responsiveIframe();
+                    });
+        
+    </script>
+{/block:IfDisqusShortname}
+
+
+
+<script>
+(function( $ ) {
+
+    //Function to animate slider captions 
+    function doAnimations( elems ) {
+        //Cache the animationend event in a variable
+        var animEndEv = 'webkitAnimationEnd animationend';
+        
+        elems.each(function () {
+            var $this = $(this),
+                $animationType = $this.data('animation');
+            $this.addClass($animationType).one(animEndEv, function () {
+                $this.removeClass($animationType);
+            });
+        });
+    }
+    
+    //Variables on page load 
+    var $myCarousel = $('#carousel-example-generic'),
+        $firstAnimatingElems = $myCarousel.find('.item:first').find("[data-animation ^= 'animated']");
+        
+    //Initialize carousel 
+    $myCarousel.carousel();
+    
+    //Animate captions in first slide on page load 
+    doAnimations($firstAnimatingElems);
+    
+    //Pause carousel  
+    $myCarousel.carousel('pause');
+    
+    
+    //Other slides to be animated on carousel slide event 
+    $myCarousel.on('slide.bs.carousel', function (e) {
+        var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
+        doAnimations($animatingElems);
+    });  
+    $('#carousel-example-generic').carousel({
+        interval:3000,
+        pause: "false"
+    });
+    
+})(jQuery); 
+</script>
+
+
+
+</body>
+  
+
+
+</html>
